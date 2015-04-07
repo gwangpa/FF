@@ -11,55 +11,55 @@
 @implementation Her
 
 + (NSString *)startDemonstrateWithPadMaxPoint:(CGPoint)padPoint
-                              firstRobotPoint:(CGPoint)firstRobotPoint
-                          firstRobotDirection:(RobotDirection)firstRobotDirection
-                            firstRobotCommand:(NSString *)firstRobotCommands
-                             secondRobotPoint:(CGPoint)secondRobotPoint
-                         secondRobotDirection:(RobotDirection)secondRobotDirection
-                           secondRobotCommand:(NSString *)secondRobotCommands
+                           firstSheepDogPoint:(CGPoint)firstSheepDogPoint
+                       firstSheepDogDirection:(SheepDogDirection)firstSheepDogDirection
+                         firstSheepDogCommand:(NSString *)firstSheepDogCommand
+                          secondSheepDogPoint:(CGPoint)secondSheepDogPoint
+                      secondSheepDogDirection:(SheepDogDirection)secondSheepDogDirection
+                        secondSheepDogCommand:(NSString *)secondSheepDogCommand
 {
     // pad doc
     PadDock *padDoc = [[PadDock alloc] initWithMaxPoint:padPoint];
     
-    // first robot
-    Robot *firstRobot = [[Robot alloc] initWithPoint:firstRobotPoint direction:firstRobotDirection padDock:padDoc];
+    // first SheepDog
+    SheepDog *firstSheepDog = [[SheepDog alloc] initWithPoint:firstSheepDogPoint direction:firstSheepDogDirection padDock:padDoc];
     
-    // second robot
-    Robot *secondRobot = [[Robot alloc] initWithPoint:secondRobotPoint direction:secondRobotDirection padDock:padDoc];
+    // second SheepDog
+    SheepDog *secondSheepDog = [[SheepDog alloc] initWithPoint:secondSheepDogPoint direction:secondSheepDogDirection padDock:padDoc];
 
     // order
-    NSUInteger orderMax = firstRobotCommands.length > secondRobotCommands.length ? firstRobotCommands.length : secondRobotCommands.length;
+    NSUInteger orderMax = firstSheepDogCommand.length > secondSheepDogCommand.length ? firstSheepDogCommand.length : secondSheepDogCommand.length;
     for (NSUInteger i = 0; i < orderMax; i++) {
         // make range
         NSRange range = NSMakeRange(i, 1);
 
-        // order first robot if possible
-        if (i < firstRobotCommands.length) {
-            NSString *command = [firstRobotCommands substringWithRange:range];
+        // order first SheepDog if possible
+        if (i < firstSheepDogCommand.length) {
+            NSString *command = [firstSheepDogCommand substringWithRange:range];
             if ([command isEqualToString:@"L"] == YES) {
-                [firstRobot order:RobotOrderTypeTurnLeft];
+                [firstSheepDog order:SheepDogOrderTypeTurnLeft];
             } else if ([command isEqualToString:@"R"] == YES) {
-                [firstRobot order:RobotOrderTypeTurnRight];
+                [firstSheepDog order:SheepDogOrderTypeTurnRight];
             } else {
-                [firstRobot order:RobotOrderTypeMove];
+                [firstSheepDog order:SheepDogOrderTypeMove];
             }
         }
 
         // order second
-        if (i < secondRobotCommands.length) {
-            NSString *command = [secondRobotCommands substringWithRange:range];
+        if (i < secondSheepDogCommand.length) {
+            NSString *command = [secondSheepDogCommand substringWithRange:range];
             if ([command isEqualToString:@"L"] == YES) {
-                [secondRobot order:RobotOrderTypeTurnLeft];
+                [secondSheepDog order:SheepDogOrderTypeTurnLeft];
             } else if ([command isEqualToString:@"R"] == YES) {
-                [secondRobot order:RobotOrderTypeTurnRight];
+                [secondSheepDog order:SheepDogOrderTypeTurnRight];
             } else {
-                [secondRobot order:RobotOrderTypeMove];
+                [secondSheepDog order:SheepDogOrderTypeMove];
             }
         }
     }
     
-    // return robots' position
-    return [NSString stringWithFormat:@"%@ %@", [firstRobot positionInfo], [secondRobot positionInfo]];
+    // return SheepDogs' position
+    return [NSString stringWithFormat:@"%@ %@", [firstSheepDog positionInfo], [secondSheepDog positionInfo]];
 }
 
 @end

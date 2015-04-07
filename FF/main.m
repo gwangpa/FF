@@ -12,12 +12,12 @@
 
 int main(int argc, char * argv[]) {
     NSString *result = [Her startDemonstrateWithPadMaxPoint:CGPointMake(5, 5)
-                                            firstRobotPoint:CGPointMake(1, 2)
-                                        firstRobotDirection:RobotDirectionN
-                                          firstRobotCommand:@"LMLMLMLMM"
-                                           secondRobotPoint:CGPointMake(3, 3)
-                                       secondRobotDirection:RobotDirectionE
-                                         secondRobotCommand:@"MMRMMRMRRM"];
+                                            firstSheepDogPoint:CGPointMake(1, 2)
+                                        firstSheepDogDirection:SheepDogDirectionN
+                                          firstSheepDogCommand:@"LMLMLMLMM"
+                                           secondSheepDogPoint:CGPointMake(3, 3)
+                                       secondSheepDogDirection:SheepDogDirectionE
+                                         secondSheepDogCommand:@"MMRMMRMRRM"];
     NSLog(@"RESULT : %@", result);
 
     @autoreleasepool {

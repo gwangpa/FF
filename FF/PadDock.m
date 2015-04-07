@@ -7,7 +7,7 @@
 //
 
 #import "PadDock.h"
-#import "Robot.h"
+#import "SheepDog.h"
 
 @interface PadDock ()
 
@@ -30,14 +30,14 @@
     return self;
 }
 
-- (void)locateRobot:(Robot *)robot
+- (void)locateRobot:(SheepDog *)robot
 {
     [_robots addObject:robot];
 }
 
-- (Robot *)getRobotAtPoint:(CGPoint)point
+- (SheepDog *)getRobotAtPoint:(CGPoint)point
 {
-    for (Robot *candidateRobot in _robots) {
+    for (SheepDog *candidateRobot in _robots) {
         if (CGPointEqualToPoint(point, candidateRobot.currentPoint) == YES) {
             return candidateRobot;
         }

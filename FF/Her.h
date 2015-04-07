@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Robot.h"
+#import "SheepDog.h"
 #import "PadDock.h"
 
 @interface Her : NSObject
 
 + (NSString *)startDemonstrateWithPadMaxPoint:(CGPoint)padPoint
-                              firstRobotPoint:(CGPoint)firstRobotPoint
-                          firstRobotDirection:(RobotDirection)firstRobotDirection
-                            firstRobotCommand:(NSString *)firstRobotCommand
-                             secondRobotPoint:(CGPoint)secondRobotPoint
-                         secondRobotDirection:(RobotDirection)secondRobotDirection
-                           secondRobotCommand:(NSString *)secondRobotCommand;
+                              firstSheepDogPoint:(CGPoint)firstSheepDogPoint
+                          firstSheepDogDirection:(SheepDogDirection)firstSheepDogDirection
+                            firstSheepDogCommand:(NSString *)firstSheepDogCommand
+                             secondSheepDogPoint:(CGPoint)secondSheepDogPoint
+                         secondSheepDogDirection:(SheepDogDirection)secondSheepDogDirection
+                           secondSheepDogCommand:(NSString *)secondSheepDogCommand;
 
 @end

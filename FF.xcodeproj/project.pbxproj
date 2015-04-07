@@ -15,7 +15,7 @@
 		3CF4C46E1ACE91190066C7FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF4C46C1ACE91190066C7FC /* LaunchScreen.xib */; };
 		3CF4C47A1ACE91190066C7FC /* FFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4C4791ACE91190066C7FC /* FFTests.m */; };
 		3CF4C4851ACE928C0066C7FC /* PadDock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4C4841ACE928C0066C7FC /* PadDock.m */; };
-		3CF4C4891ACE95030066C7FC /* Robot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4C4881ACE95030066C7FC /* Robot.m */; };
+		3CF4C4891ACE95030066C7FC /* SheepDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4C4881ACE95030066C7FC /* SheepDog.m */; };
 		3CF4C48C1ACE9E570066C7FC /* Her.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4C48B1ACE9E570066C7FC /* Her.m */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +45,8 @@
 		3CF4C4791ACE91190066C7FC /* FFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTests.m; sourceTree = "<group>"; };
 		3CF4C4831ACE928C0066C7FC /* PadDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadDock.h; sourceTree = "<group>"; };
 		3CF4C4841ACE928C0066C7FC /* PadDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PadDock.m; sourceTree = "<group>"; };
-		3CF4C4871ACE95030066C7FC /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
-		3CF4C4881ACE95030066C7FC /* Robot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Robot.m; sourceTree = "<group>"; };
+		3CF4C4871ACE95030066C7FC /* SheepDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SheepDog.h; sourceTree = "<group>"; };
+		3CF4C4881ACE95030066C7FC /* SheepDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheepDog.m; sourceTree = "<group>"; };
 		3CF4C48A1ACE9E570066C7FC /* Her.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Her.h; sourceTree = "<group>"; };
 		3CF4C48B1ACE9E570066C7FC /* Her.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Her.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,8 +134,8 @@
 			children = (
 				3CF4C4831ACE928C0066C7FC /* PadDock.h */,
 				3CF4C4841ACE928C0066C7FC /* PadDock.m */,
-				3CF4C4871ACE95030066C7FC /* Robot.h */,
-				3CF4C4881ACE95030066C7FC /* Robot.m */,
+				3CF4C4871ACE95030066C7FC /* SheepDog.h */,
+				3CF4C4881ACE95030066C7FC /* SheepDog.m */,
 				3CF4C48A1ACE9E570066C7FC /* Her.h */,
 				3CF4C48B1ACE9E570066C7FC /* Her.m */,
 			);
@@ -247,7 +247,7 @@
 				3CF4C4851ACE928C0066C7FC /* PadDock.m in Sources */,
 				3CF4C48C1ACE9E570066C7FC /* Her.m in Sources */,
 				3CF4C4601ACE91190066C7FC /* main.m in Sources */,
-				3CF4C4891ACE95030066C7FC /* Robot.m in Sources */,
+				3CF4C4891ACE95030066C7FC /* SheepDog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +438,7 @@
 				3CF4C47F1ACE91190066C7FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CF4C4801ACE91190066C7FC /* Build configuration list for PBXNativeTarget "FFTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +447,7 @@
 				3CF4C4821ACE91190066C7FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,21 +6,21 @@
 //  Copyright (c) 2015 GwangpaDotCom. All rights reserved.
 //
 
-#import "Robot.h"
+#import "SheepDog.h"
 #import "PadDock.h"
 
-@interface Robot ()
+@interface SheepDog ()
 
 @property (nonatomic, weak) PadDock *padDock;
 @property (nonatomic, assign) CGPoint currentPoint;
 @property (nonatomic, assign) CGPoint previousPoint;
-@property (nonatomic, assign) RobotDirection currentDirection;
+@property (nonatomic, assign) SheepDogDirection currentDirection;
 
 @end
 
-@implementation Robot
+@implementation SheepDog
 
-- (instancetype)initWithPoint:(CGPoint)point direction:(RobotDirection)direction padDock:(PadDock *)padDock {
+- (instancetype)initWithPoint:(CGPoint)point direction:(SheepDogDirection)direction padDock:(PadDock *)padDock {
     self = [super init];
     if (self) {
         self.padDock = padDock;
@@ -31,41 +31,41 @@
     return self;
 }
 
-- (void)order:(RobotOrderType)orderType {
+- (void)order:(SheepDogOrderType)orderType {
     switch (orderType) {
-        case RobotOrderTypeTurnLeft:
+        case SheepDogOrderTypeTurnLeft:
             _currentDirection--;
-            if (_currentDirection < RobotDirectionN) {
-                _currentDirection = RobotDirectionW;
+            if (_currentDirection < SheepDogDirectionN) {
+                _currentDirection = SheepDogDirectionW;
             }
             break;
             
-        case RobotOrderTypeTurnRight:
+        case SheepDogOrderTypeTurnRight:
             _currentDirection++;
-            if (_currentDirection > RobotDirectionW) {
-                _currentDirection = RobotDirectionN;
+            if (_currentDirection > SheepDogDirectionW) {
+                _currentDirection = SheepDogDirectionN;
             }
             break;
             
-        case RobotOrderTypeMove: {
+        case SheepDogOrderTypeMove: {
             // destination point
             CGPoint destinationPoint = _currentPoint;
             
             // calculate to point
             switch (_currentDirection) {
-                case RobotDirectionN:
+                case SheepDogDirectionN:
                     destinationPoint.y += 1;
                     break;
                     
-                case RobotDirectionE:
+                case SheepDogDirectionE:
                     destinationPoint.x += 1;
                     break;
                     
-                case RobotDirectionS:
+                case SheepDogDirectionS:
                     destinationPoint.y -= 1;
                     break;
                     
-                case RobotDirectionW:
+                case SheepDogDirectionW:
                     destinationPoint.x -= 1;
                     break;
             }
@@ -85,7 +85,7 @@
             }
             
             // check if there is another robot at the point
-            Robot *robotAtDestinationPoint = [_padDock getRobotAtPoint:destinationPoint];
+            SheepDog *robotAtDestinationPoint = [_padDock getRobotAtPoint:destinationPoint];
             if (robotAtDestinationPoint == nil || robotAtDestinationPoint == self) {
                 self.currentPoint = destinationPoint;
             }
@@ -97,19 +97,19 @@
 - (NSString *)positionInfo {
     NSString *direction = nil;
     switch (_currentDirection) {
-        case RobotDirectionN:
+        case SheepDogDirectionN:
             direction = @"N";
             break;
             
-        case RobotDirectionE:
+        case SheepDogDirectionE:
             direction = @"E";
             break;
             
-        case RobotDirectionS:
+        case SheepDogDirectionS:
             direction = @"S";
             break;
             
-        case RobotDirectionW:
+        case SheepDogDirectionW:
             direction = @"W";
             break;
     }

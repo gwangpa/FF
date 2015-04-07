@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class Robot;
+@class SheepDog;
 
 @interface PadDock : NSObject
 
@@ -21,9 +21,9 @@
 - (instancetype)initWithMaxPoint:(CGPoint)maxPoint;
 
 // locate robot to pad dock
-- (void)locateRobot:(Robot *)robot;
+- (void)locateRobot:(SheepDog *)robot;
 
 // check if there is robot at point
-- (Robot *)getRobotAtPoint:(CGPoint)point;
+- (SheepDog *)getRobotAtPoint:(CGPoint)point;
 
 @end
