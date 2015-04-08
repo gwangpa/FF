@@ -21,9 +21,9 @@
 - (instancetype)initWithMaxPoint:(CGPoint)maxPoint;
 
 // locate robot to pad dock
-- (void)locateRobot:(SheepDog *)robot;
+- (void)locateSheepDog:(SheepDog *)sheepDog;
 
 // check if there is robot at point
-- (SheepDog *)getRobotAtPoint:(CGPoint)point;
+- (SheepDog *)getSheepDogAtPoint:(CGPoint)point;
 
 @end

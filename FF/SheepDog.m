@@ -26,7 +26,7 @@
         self.padDock = padDock;
         self.currentPoint = point;
         self.currentDirection = direction;
-        [padDock locateRobot:self];
+        [padDock locateSheepDog:self];
     }
     return self;
 }
@@ -85,7 +85,7 @@
             }
             
             // check if there is another robot at the point
-            SheepDog *robotAtDestinationPoint = [_padDock getRobotAtPoint:destinationPoint];
+            SheepDog *robotAtDestinationPoint = [_padDock getSheepDogAtPoint:destinationPoint];
             if (robotAtDestinationPoint == nil || robotAtDestinationPoint == self) {
                 self.currentPoint = destinationPoint;
             }

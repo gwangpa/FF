@@ -11,7 +11,7 @@
 
 @interface PadDock ()
 
-@property (nonatomic, strong) NSMutableArray *robots;
+@property (nonatomic, strong) NSMutableArray *sheepDogs;
 @property (nonatomic, assign) NSUInteger maxX;
 @property (nonatomic, assign) NSUInteger maxY;
 
@@ -23,23 +23,23 @@
 {
     self = [super init];
     if (self) {
-        self.robots = [NSMutableArray array];
+        self.sheepDogs = [NSMutableArray array];
         self.maxX = maxPoint.x;
         self.maxY = maxPoint.y;
     }
     return self;
 }
 
-- (void)locateRobot:(SheepDog *)robot
+- (void)locateSheepDog:(SheepDog *)sheepDog
 {
-    [_robots addObject:robot];
+    [_sheepDogs addObject:sheepDog];
 }
 
-- (SheepDog *)getRobotAtPoint:(CGPoint)point
+- (SheepDog *)getSheepDogAtPoint:(CGPoint)point
 {
-    for (SheepDog *candidateRobot in _robots) {
-        if (CGPointEqualToPoint(point, candidateRobot.currentPoint) == YES) {
-            return candidateRobot;
+    for (SheepDog *candidateSheepDog in _sheepDogs) {
+        if (CGPointEqualToPoint(point, candidateSheepDog.currentPoint) == YES) {
+            return candidateSheepDog;
         }
     }
     return nil;
