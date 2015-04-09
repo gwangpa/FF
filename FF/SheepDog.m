@@ -11,7 +11,7 @@
 
 @interface SheepDog ()
 
-@property (nonatomic, weak) PadDock *padDock;
+@property (nonatomic, unsafe_unretained) PadDock *padDock;
 @property (nonatomic, assign) CGPoint currentPoint;
 @property (nonatomic, assign) CGPoint previousPoint;
 @property (nonatomic, assign) SheepDogDirection currentDirection;
